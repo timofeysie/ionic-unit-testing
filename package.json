@@ -6,7 +6,9 @@
   "scripts": {
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
-    "test": "ng test"
+    "test": "ng test",
+    "e2e": "protractor",
+    "postinstall": "webdriver-manager update"
   },
   "dependencies": {
     "@angular/common": "2.1.1",
