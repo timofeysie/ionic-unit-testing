@@ -13,8 +13,14 @@ Then running the tests in a separate terminal:
 npm run e2e
 ```
 
+The unit tests:
+```
+$ npm test
 
-Currently the unit tests are broken with the following output:
+
+## Problems with the initial unit test setup
+
+Out of the box, the unit tests were broken with the following output:
 ```
 $ npm test
 
@@ -40,6 +46,13 @@ Created [an issue](https://github.com/lathonez/clicker/issues/188) for this erro
 
 [This issue](https://github.com/angular/angular-cli/issues/2045) says: ```angular-cli-build.js file was removed when angular-cli migrated to webpack```.
 
+Lathonez showed that the cli version was the problem.  In the package.js:
+```
+-    "angular-cli": "^0.1.0",
++    "angular-cli": "1.0.0-beta.20-1",
+```
+
+He also removed references to the ClickersService and ClickersServiceMock from his clicker project in the test.ts file.  Now the tests run and pass.
 
 ## e2e tests
 
