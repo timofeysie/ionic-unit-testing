@@ -1,6 +1,18 @@
 # Ionic Unit Testing App
 
-This project is a vanilla Ionic tabs starter app with the addition of the [Lathonez unit testing](http://lathonez.github.io/2016/ionic-2-unit-testing/) setup.
+This project is a vanilla Ionic tabs starter app with the addition of the [Lathonez unit testing](http://lathonez.github.io/2016/ionic-2-unit-testing/) and the 
+[e2e test blog](http://lathonez.github.io/2016/ionic-2-e2e-testing/).
+
+The e23 tests can be run by first starting the server
+```
+$ ionic serve
+```
+
+Then running the tests in a separate terminal:
+```
+npm run e2e
+```
+
 
 Currently the unit tests are broken with the following output:
 ```
