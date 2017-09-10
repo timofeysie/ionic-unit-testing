@@ -1,12 +1,12 @@
-import { browser, element, by } from 'protractor';
+import { browser } from 'protractor';
+import { AppPageObject } from './page-objects/app.page-object';
 
-describe('Ionic testing app', () => {
+describe('App', () => {
+
+  let appPage: AppPageObject;
 
   beforeEach(() => {
-    browser.get('');
+    appPage = new AppPageObject();
   });
 
-  it('should have a title', () => {
-    expect(browser.getTitle()).toEqual('Home');
-  });
-})
+});

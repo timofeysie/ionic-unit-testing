@@ -32,7 +32,3 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
-
-# e2e
-/e2e/*.js
-/e2e/*.map
