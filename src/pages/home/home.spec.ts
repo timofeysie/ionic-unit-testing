@@ -42,6 +42,14 @@ describe('Home Page', () => {
   it('the modules class member should contain 5 modules after ionViewDidLoad has been triggered', () => {
     comp.ionViewDidLoad();
     expect(comp.modules.length).toBe(5);
+  });
+
+  it('the openModule() function should push the lesson select page onto the navigation stack', () => {
+    let navCtrl = fixture.debugElement.injector.get(NavController);
+    spyOn(navCtrl, 'push');
+    let testModule = {title: 'pretend module'};
+    comp.openModule(testModule);
+    expect(navCtrl.push).toHaveBeenCalledWith('LessonSelectPage', {module: testModule});
 
   });
 

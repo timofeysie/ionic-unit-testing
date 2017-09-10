@@ -9,7 +9,8 @@
 
 <ion-content padding>
   <ion-list class="module-list">
-        <ion-item *ngFor="let module of modules">
+        <ion-item (click)="openModule(module)" 
+          *ngFor="let module of modules">
           <strong>{{module.title}}</strong>
           <p>{{module.description}}</p>
         </ion-item>

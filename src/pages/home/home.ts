@@ -15,13 +15,17 @@ export class HomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
-	this.modules = [
-            {title: 'Module One', description: 'Test'},
-            {title: 'Module Two', description: 'Test'},
-            {title: 'Module Three', description: 'Test'},
-            {title: 'Module Four', description: 'Test'},
-            {title: 'Module Five', description: 'Test'}
-        ];
+	  this.modules = [
+      {title: 'Module One', description: 'Test'},
+      {title: 'Module Two', description: 'Test'},
+      {title: 'Module Three', description: 'Test'},
+      {title: 'Module Four', description: 'Test'},
+      {title: 'Module Five', description: 'Test'}
+    ];
+  }
+
+  openModule(module){
+    this.navCtrl.push('LessonSelectPage', { module: module });
   }
 
 }
