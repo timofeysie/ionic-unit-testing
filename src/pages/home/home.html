@@ -6,13 +6,11 @@
 
 </ion-header>
 
-
 <ion-content padding>
   <ion-list class="module-list">
-        <ion-item (click)="openModule(module)" 
-          *ngFor="let module of modules">
-          <strong>{{module.title}}</strong>
-          <p>{{module.description}}</p>
-        </ion-item>
-    </ion-list>
+    <button (click)="openModule(module)" 
+      ion-item *ngFor="let module of modules">
+      {{module.title}}
+    </button>
+  </ion-list>
 </ion-content>

@@ -7,7 +7,7 @@ export class HomePageObject {
     }
 
     getModuleListItems(){
-        return element.all(by.css('.module-list ion-item'));
+        return element.all(by.css('.module-list button'));
     }
 
 }
