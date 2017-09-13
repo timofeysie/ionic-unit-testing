@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core
 import { LessonSelectPage } from './lesson-select';
 import { IonicModule, NavController, NavParams, DeepLinker } from 'ionic-angular';
 import { NavMock, NavParamsMock, DeepLinkerMock } from '../../../test-config/mocks-ionic';
+import {} from 'jasmine';
 
 describe('Lesson Select Page', () => {
 
