@@ -3,6 +3,7 @@ import { DebugElement } from '@angular/core';
 import { HomePage } from './home';
 import { IonicModule, NavController, DeepLinker } from 'ionic-angular';
 import { NavMock, DeepLinkerMock } from '../../../test-config/mocks-ionic';
+import { ComponentsModule } from '../../components/components.module';
 import {} from 'jasmine';
 
 describe('Home Page', () => {
@@ -20,7 +21,8 @@ describe('Home Page', () => {
       ],
       providers: [
         { provide: DeepLinker, useClass: DeepLinkerMock },
-        { provide: NavController, useClass: NavMock }
+        { provide: NavController, useClass: NavMock },
+        { provide: ComponentsModule, useClass: NavMock}
       ]
     });
 
@@ -41,7 +43,7 @@ describe('Home Page', () => {
 
   it('the modules class member should contain 5 modules after ionViewDidLoad has been triggered', () => {
     comp.ionViewDidLoad();
-    expect(comp.modules.length).toBe(5);
+    expect(comp.modules.length).toBe(15);
   });
 
   it('the openModule() function should push the lesson select page onto the navigation stack', () => {

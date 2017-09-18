@@ -1,16 +1,32 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <!--<expandable-header [scrollArea]="myContent">
+        <ion-item>
+            <ion-label><ion-icon name="search"></ion-icon></ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label><ion-icon name="funnel-outline"></ion-icon></ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+    </expandable-header>-->
+
+    <ion-navbar>
+        <ion-title>
+        Modules
+        </ion-title>
+    </ion-navbar>
 
 </ion-header>
 
-<ion-content padding>
+<ion-content fullscreen padding #myContent>
+
   <ion-list class="module-list">
     <button (click)="openModule(module)" 
       ion-item *ngFor="let module of modules">
       {{module.title}}
     </button>
   </ion-list>
+
 </ion-content>
