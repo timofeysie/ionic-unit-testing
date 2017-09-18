@@ -32,3 +32,22 @@ To serve the app, run `ionic serve`.
 To run the end-to-end tests, run (while the app is being served) `npm run e2e`.
 
 See the example end-to-end test in `e2e/app.e2e-spec.ts`.
+
+## The Expandable Header
+
+This component works fine, but it is causing half the unit tests to fail when used on the home page.
+The failing tests are:
+```
+Chrome 60.0.3112 (Mac OS X 10.12.6) Home Page should create component FAILED
+	Error: Template parse errors:
+	Can't bind to 'scrollArea' since it isn't a known property of 'expandable-header'.
+	1. If 'expandable-header' is an Angular component and it has 'scrollArea' input, then verify that it is part of this module ...
+    Expected false to be true.
+    ...
+Chrome 60.0.3112 (Mac OS X 10.12.6) Home Page should have a class member called modules that is an array FAILED
+Chrome 60.0.3112 (Mac OS X 10.12.6) Home Page the modules class member should contain 5 modules after ionViewDidLoad has been triggered FAILED
+Chrome 60.0.3112 (Mac OS X 10.12.6) Home Page the openModule() function should push the lesson select page onto the navigation stack FAILED
+    ...
+Chrome 60.0.3112 (Mac OS X 10.12.6): Executed 8 of 8 (4 FAILED) (2.788 secs / 2.714 secs)
+```
+
