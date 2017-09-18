@@ -51,3 +51,19 @@ Chrome 60.0.3112 (Mac OS X 10.12.6) Home Page the openModule() function should p
 Chrome 60.0.3112 (Mac OS X 10.12.6): Executed 8 of 8 (4 FAILED) (2.788 secs / 2.714 secs)
 ```
 
+## THe Skeleton Card
+This is a very simple component, but the configuration is failing.
+Here is the error:
+```
+Unhandled Promise rejection: (8)
+"Template parse errors:
+'ion-avatar' is not a known element:
+1. If 'ion-avatar' is an Angular component, then verify that it is part of this module.
+2. If 'ion-avatar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. (\"
+
+  <ion-item>
+    [ERROR ->]<ion-avatar item-start>
+```
+
+Not sure why this is happening.  The ComponentsModule exports and declares skeleton card.
+The home page module imports that module, and this is all actually created by the Ionic CLI anyhow. 

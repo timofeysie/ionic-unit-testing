@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-
+import { ComponentsModule } from '../../components/components.module';
 /**
  * HomePage page.
  */
 @IonicPage()
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html',
+  templateUrl: 'home.html'
 })
 export class HomePage {
    	modules: Object[] = [];
