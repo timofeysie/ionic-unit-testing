@@ -16,11 +16,46 @@ export class HomePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
 	  this.modules = [
-        {title: 'Module One', description: 'Test', lessons: [{title: 'lesson 1'},{title: 'lesson 2'}]},
-        {title: 'Module Two', description: 'Test', lessons: [{title: 'lesson 1'},{title: 'lesson 2'}]},
-        {title: 'Module Three', description: 'Test', lessons: [{title: 'lesson 1'},{title: 'lesson 2'}]},
-        {title: 'Module Four', description: 'Test', lessons: [{title: 'lesson 1'},{title: 'lesson 2'}]},
-        {title: 'Module Five', description: 'Test', lessons: [{title: 'lesson 1'},{title: 'lesson 2'}]},
+        {    
+                title: 'Module One', 
+                description: 'Test', 
+                lessons: [
+                    {title: 'lesson 1', content: 'this is the lesson content'},
+                    {title: 'lesson 2', content: 'this is the lesson content'}
+                ]
+            },
+            {    
+                title: 'Module Two', 
+                description: 'Test', 
+                lessons: [
+                    {title: 'lesson 1', content: 'this is the lesson content'},
+                    {title: 'lesson 2', content: 'this is the lesson content'}
+                ]
+            },
+            {    
+                title: 'Module Three', 
+                description: 'Test', 
+                lessons: [
+                    {title: 'lesson 1', content: 'this is the lesson content'},
+                    {title: 'lesson 2', content: 'this is the lesson content'}
+                ]
+            },
+            {    
+                title: 'Module Four', 
+                description: 'Test', 
+                lessons: [
+                    {title: 'lesson 1', content: 'this is the lesson content'},
+                    {title: 'lesson 2', content: 'this is the lesson content'}
+                ]
+            },
+            {    
+                title: 'Module Five', 
+                description: 'Test', 
+                lessons: [
+                    {title: 'lesson 1', content: 'this is the lesson content'},
+                    {title: 'lesson 2', content: 'this is the lesson content'}
+                ]
+            },
         {title: 'Module Six', description: 'Test', lessons: [{title: 'lesson 1'},{title: 'lesson 2'}]},
         {title: 'Module Seven', description: 'Test', lessons: [{title: 'lesson 1'},{title: 'lesson 2'}]},
         {title: 'Module Eight', description: 'Test', lessons: [{title: 'lesson 1'},{title: 'lesson 2'}]},

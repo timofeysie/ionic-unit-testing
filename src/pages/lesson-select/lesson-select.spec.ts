@@ -51,4 +51,12 @@ describe('Lesson Select Page', () => {
     expect(comp.lessons.length).toBe(4);
   });
 
+  it('the openLesson() function should push the lesson page onto the navigation stack', () => {
+    let navCtrl = fixture.debugElement.injector.get(NavController);
+    spyOn(navCtrl, 'push');
+    let testLesson = {title: 'lesson 1', content: 'this is the lesson content'};
+    comp.openLesson(testLesson);
+    expect(navCtrl.push).toHaveBeenCalledWith('LessonPage', {lesson: testLesson});
+  });
+
 });

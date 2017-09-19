@@ -14,7 +14,16 @@ export class LessonSelectPage {
   }
 
   ionViewDidLoad() {
-    this.lessons = this.navParams.get('module').lessons;
+    try {
+      this.lessons = this.navParams.get('module').lessons;
+    } catch (err) {
+      // this will catch an error if the page refreshes when it's on a lesson page
+      console.log('no module nav param');
+    }
   }
+
+  openLesson(lesson) {
+        this.navCtrl.push('LessonPage', {lesson: lesson});
+    }
 
 }

@@ -9,7 +9,8 @@
 
 <ion-content padding>
   <ion-list class="lesson-list">
-      <button ion-item *ngFor="let lesson of lessons">
+      <button  (click)="openLesson(lesson)"
+        ion-item *ngFor="let lesson of lessons">
           {{lesson.title}}
       </button>
   </ion-list>
