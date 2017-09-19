@@ -14,7 +14,7 @@ describe('Home', () => {
     });
 
     it('should be able to view a list', () => {
-        expect<any>(homePage.getModuleListItems().count()).toBe(5);
+        expect<any>(homePage.getModuleListItems().count()).toBe(15);
     });
 
     it('the list of modules should contain the titles of the modules', () => {
