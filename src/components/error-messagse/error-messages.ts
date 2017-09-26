@@ -8,6 +8,7 @@ import { FormControl } from '@angular/forms';
 export class ErrorMessagesComponent {
 
     @Input('control') control: FormControl;
+    @Input('customErrors') customErrors: Object = {};
     errorMessages: Object;
 
     constructor() {
@@ -18,6 +19,14 @@ export class ErrorMessagesComponent {
             'maxlength': 'Sorry, this field is too long',
             'pattern': 'Sorry, this is not valid'
         };
+    }
+
+    ngAfterViewInit(){
+        // If a custom error has been provided, override the default errors (or add additional errors)
+        Object.keys(this.customErrors).forEach((errorType) => {
+            this.errorMessages[errorType] = this.customErrors[errorType];
+        });
+
     }
 
     get errorMessage() {
