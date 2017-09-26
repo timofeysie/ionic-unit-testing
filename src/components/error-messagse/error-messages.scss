@@ -1,0 +1,23 @@
+error-messages {
+
+    .async-pending {
+        display: flex;
+        align-items: center;
+        height: 20px;
+        font-weight: normal;
+    }
+
+    ion-spinner {
+        height: 20px;    
+        width: 20px;
+        margin-right: 5px;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 20px;
+        padding-bottom: 5px;
+        color: map-get($colors, danger);
+    }
+
+}
