@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ComponentsModule } from '../components/components.module';
+import { AuthProvider } from '../providers/auth/auth';
 
 @NgModule({
 	declarations: [
@@ -22,7 +23,8 @@ import { ComponentsModule } from '../components/components.module';
 	providers: [
 		StatusBar,
 		SplashScreen,
-		{ provide: ErrorHandler, useClass: IonicErrorHandler }
+		{ provide: ErrorHandler, useClass: IonicErrorHandler },
+    AuthProvider
   ]
 })
 export class AppModule { }
