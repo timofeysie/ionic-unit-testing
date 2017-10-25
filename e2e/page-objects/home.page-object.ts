@@ -1,13 +1,24 @@
-import { browser, element, by, ElementFinder } from 'protractor';
+import { browser, protractor, element, by, ElementFinder } from 'protractor';
+import { LoginPageObject } from './login.page-object';
+import { AppPageObject } from './app.page-object';
 
 export class HomePageObject {
 
-    browseToPage(){
-        browser.get('');
-    }
+  loginPage = new LoginPageObject();
+  appPage = new AppPageObject();
 
-    getModuleListItems(){
-        return element.all(by.css('.module-list button'));
-    }
+  browseToPage(){
+    this.loginPage.browseToPage();
+    let input = this.loginPage.getKeyInput();
+    let loginButton = this.loginPage.getLoginButton();
+    input.sendKeys('abcd-egfh-ijkl-mnop');
+    loginButton.click();
+    browser.wait(protractor.ExpectedConditions.urlContains('home'));
+    this.appPage.waitForClickBlock();
+  }
+
+  getModuleListItems(){
+    return element.all(by.css('.module-list button'));
+  }
 
 }
