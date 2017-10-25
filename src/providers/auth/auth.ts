@@ -15,4 +15,11 @@ export class AuthProvider {
     console.log('Hello AuthProvider Provider');
   }
 
+  checkKey(key) {
+    let body = {
+      key: key
+    };
+    return this.http.post('http://localhost:8080/api/check', body).map(res => res.json());
+  }
+
 }

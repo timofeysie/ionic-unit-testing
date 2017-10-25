@@ -30,9 +30,7 @@ describe('Login Page', () => {
   });
 
   it('should create component', () => {
-
     expect(comp instanceof LoginPage).toBe(true);
-
   });
 
 });
